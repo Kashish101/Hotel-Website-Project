@@ -1,0 +1,125 @@
+<!Doctype>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>payment form</title>
+		<link rel="stylesheet" type="text/css" href="payment.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+<script>
+	function Validation(){
+        if(document.getElementById("owner").value == ""){
+          document.getElementById("errorowner").innerHTML="Please fill username";
+        }
+        else{
+          document.getElementById("errorowner").innerHTML="";
+        }
+		if(document.getElementById("cvv").value == ""){
+          document.getElementById("errorcvv").innerHTML="Please fill cvv";
+        }
+        else{
+          document.getElementById("errorcvv").innerHTML="";
+        }
+		if(document.getElementById("cno").value == ""){
+          document.getElementById("errorcno").innerHTML="Please fill your card number";
+        }
+        else{
+          document.getElementById("errorcno").innerHTML="";
+        }
+		if(document.getElementById("expire").value == ""){
+          document.getElementById("errorexpire").innerHTML="Please fill username";
+        }
+        else{
+          document.getElementById("errorexpire").innerHTML="";
+        }
+	}
+</script>
+</head>
+	<body>
+		<div class="container">
+			<h1>Confirm Your Payment</h1>
+			<div class="first-row">
+				<div class="owner">
+					<h3>Owner</h3> <span id="errorowner"></span>
+					<div class="input-field">
+						<input type="text" id="owner">
+					</div>
+				</div>
+				<div class="cvv">
+					<h3>CVV</h3><span id="errorcvv"></span>
+					<div class="input-field">
+						<input type="password" id="cvv">
+					</div>
+				</div>
+			</div>
+		    <div class="second-row">
+				<div class="card-number">
+					<h3>Card Number</h3><span id="errorcno"></span>
+					<div class="input-field">
+						<input type="text" id="cno"> 
+					</div> 
+				</div> 
+			</div>
+			<div class="third-row">   
+			    <h3>Expiry Date</h3> <span id="errorexpire"></span>
+			    <div class="selection">
+			    	<div class="date" id="expire">
+			    		<select name="months" id="months" required>
+			    				
+			    			
+			    			<option>Month</option>
+			    			<option value="Jan">Jan</option>
+			    			<option value="Jan">Feb</option>
+			    			<option value="Jan">Mar</option>
+			    			<option value="Jan">Apr</option>
+			    			<option value="Jan">May</option>
+			    			<option value="Jan">Jun</option>
+			    			<option value="Jan">Jul</option>
+			    			<option value="Jan">Aug</option>
+			    			<option value="Jan">Sept</option>
+			    			<option value="Jan">Oct</option>
+			    			<option value="Jan">Nov</option>
+			    			<option value="Jan">Dec</option>
+			    		</select>
+
+			    		<select name="years" id="years" required>
+			    			<option>Year</option>
+			    			<option value="2025">2025</option>
+			    			<option value="2024">2024</option>
+			    			<option value="2023">2023</option>
+			    			<option value="2022">2022</option>
+			    			<option value="2021">2021</option>
+			    			<option value="2020">2020</option>
+			    		</select>
+			       </div>
+			       <div class="cards">
+			       	<img src="pictures/mastercard.jpg "height="100px" width="100px">
+			       	<img src="pictures/visa.jpg" height="100px" width="100px">
+			       	<img src="pictures/paypal.jpg" height="100px" width="100px">
+			</div> 
+		</div>
+	</div>
+	<a onclick="Validation()">Confirm</a>		
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+	</html>

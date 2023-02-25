@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#h1{
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	margin-top: 10px;
+}
+body{
+	
+	background-image: url(pictures/rest.jfif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	/*opacity: 0.9;*/
+}
+
+#form{
+	background-color: #000;
+	height: 600px;
+	width: 800px;
+	margin: auto;
+	margin-top: 90px;
+	opacity: 0.8;
+}
+.input{
+	background-color: transparent;
+}
+
+#first-group{
+	border: 2px solid cyan;
+	width: 400px;
+	margin-top: 38px;
+	margin-left: 200px;
+}
+#content{
+	border: 1px solid #fff;
+	margin: 10px;
+	margin-left: 8px;
+	padding: 5px; 
+}
+#content .input{
+	border: none;
+	outline: none;
+	background: transparent;
+	margin-left: 8px;
+	/*width: 300px;*/
+	color: white;
+}
+::placeholder{
+	color: #fff;
+}
+
+.fa{
+	display: inline-block;
+	color: red;
+	border-right: 1px solid white;
+	padding: 8px;
+	/*margin-left: 8px;*/
+}
+.fas{
+	display: inline-block;
+	color: red;
+	border-right: 1px solid white;
+	padding: 8px;
+}
+
+.margin1{
+	/*box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5 0 0 0 #ff96ad;*/
+	margin-left: 212px;
+}
+
+.button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 15px;
+  background: transparent;
+  border:  2px solid aliceblue;
+}
+#submit-bt:hover{
+	box-shadow: inset -10.5em 0 0 0 red , inset 10.5em 0 0 0 red;
+}

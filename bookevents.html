@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Restaurant Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="bookevents.css">
+	<script src="https://kit.fontawesome.com/ce5e69de06.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+  
+
+   <script type="text/javascript" >
+   	function validtion() {
+   		// body...
+   		var a = document.myForm.user.value;
+   		if(a == "") {
+   			document.getElementById('message').innerHTML="Fill the User name";
+   			return false;
+   		}
+   		var b = document.myForm.phone.value;
+   	    if(b == "") {
+   			document.getElementById('mobileno').innerHTML="Fill the Phone no.";
+   			return false;
+   		}
+   		var c = document.myForm.email.value;
+   		if(c.indexOf('@')<=0) {
+   			document.getElementById('email').innerHTML="Invalid @ position";
+   			return false;
+   		}
+   		var d = document.myForm.email.value; 
+   		if(d == "") {
+   			document.getElementById('email').innerHTML="Fill the Email id";
+   			return false;
+   		}
+		if(a,b,c,d !=""){
+			document.getElementById('email').innerHTML="";
+		   }
+   		else{
+			window.location.href="paymentform.html";
+		
+   		}
+		
+		
+		
+   			
+			// body...
+		}
+   </script>
+
+
+</head>
+<body>
+	<div class="container">
+		<form name="myForm" class="form-group" action="#" onsubmit="return validtion()">
+			<div id="form">
+				<h1 id="h1">Book Events</h1>
+
+				<div id="first-group">
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input name="user" type="text" class="input" value=""  placeholder="First Name" autocomplete="off">
+				<span id="message"style="font-weight: bold; color: white;"></span>
+				
+			</div>
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" class="input" placeholder="Last Name"
+				autocomplete="off">
+			</div>
+
+			<div id="content">
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<input name="phone" type="number" class="input" value="" placeholder="Phone No." autocomplete="off">
+				<span id="mobileno"style="font-weight: bold; color: white;"></span>
+				
+			</div>
+			
+
+			<div id="content">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input name="email" type="email" class="input" value="" placeholder="Email Id" autocomplete="off">
+				<span id="email"style="font-weight: bold; color: white;"></span>
+			</div>
+			
+
+			<div id="content"> 
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<input name="date" type="date" class="input" value="" placeholder="Check in" ><label style="color: white;">Date of Event</label>
+				<!-- <span id="date"style="font-weight: bold; color: white;"></span> -->
+			</div>
+
+			<div id="content">
+				<i class="fa fa-th" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> Events</option>
+					<option>Crystal Ballroom</option>
+					<option>Plaza Terrace Garden</option>
+					<option>Conference Hall</option>
+					<option>Birthday/Kitty Hall</option>
+					<option>Food Truck</option>
+					
+				</select>
+			</div>
+
+			
+	
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> No. of guests</option>
+					<option>1-100</option>
+					<option>100-200</option>
+					<option>200-300</option>
+					<option>300-400</option>
+					<option>400-500</option>
+					<option>500-600</option>
+					
+				</select>
+			</div>
+
+
+				</div>
+				
+                <div class="margin1">
+				<input type="reset" name="" type="button" value="reset" id="submit-bt" class="button" > 
+			<a href="Events.html #venue">	<button type="button" value="Submit" id="submit-bt" class="button"   > Back</button></a>
+				<button type="Submit" value="Submit" id="submit-bt" class="button"  onclick="validateForm()"Create UserID autocomplete="off" > Book Now</button>
+				</div>
+
+
+			</div>
+		</form>
+	</div>
+	
+	
+</body>
+</html>

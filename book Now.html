@@ -1,0 +1,290 @@
+<!DOCTYPE.html>
+<html>
+<head>
+   <script src="https://kit.fontawesome.com/ce5e69de06.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 	
+
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+   
+  
+<title> The Green Evenue </title>
+<link rel="stylesheet" href="booknow.css">
+   <script>
+	
+		function validatename()
+        {
+            if (document.getElementById("txtUsername").value=="")
+            {
+                document.getElementById("lblErrorUserID").innerHTML="(Please Enter your name)";
+            }
+            else
+            {
+                document.getElementById("lblErrorUserID").innerHTML="";
+            }
+        
+        }
+		function validatephone()
+        {
+            if (document.getElementById("txtPhone").value=="")
+            {
+                document.getElementById("lblErrorPhone").innerHTML="(Please Enter phone no.)";
+            }
+            else
+            {
+                document.getElementById("lblErrorPhone").innerHTML="";
+            }
+        
+        }
+		function validateemail(){
+			if(document.getElementById("email").value==""){
+				document.getElementById("lblErrorEmail").innerHTML="(Please enter email id)";
+			}
+			else
+            {
+                document.getElementById("lblErrorEmail").innerHTML="";
+            }
+		}
+		function validecheckin(){
+			if(document.getElementById("checkin").value==""){
+				document.getElementById("errorCI").innerHTML="(Please fill this field)";
+			}
+			else
+            {
+                document.getElementById("errorCI").innerHTML="";
+            }
+		}
+		function validecheckout(){
+			if(document.getElementById("checkout").value==""){
+				document.getElementById("errorCO").innerHTML="(Please fill this field)";
+			}
+			else
+            {
+                document.getElementById("errorCO").innerHTML="";
+            }
+		}
+		function valideroom(){
+			if(document.getElementById("room").value==""){
+				document.getElementById("errorroom").innerHTML="(Please fill this column)";
+			}
+			else
+            {
+                document.getElementById("errorroom").innerHTML="";
+            }
+		}
+		function validateID(){
+			if(document.getElementById("idproof").value==""){
+				document.getElementById("errorID").innerHTML="(Please fill this field)";
+			}
+			else
+            {
+                document.getElementById("errorID").innerHTML="";
+            }
+		}
+		
+		function validtion() {
+   		// body...
+   		var a = document.myForm.user.value;
+   		if(a == "") {
+   			document.getElementById('message').innerHTML="Fill the User name";
+   			return false;
+   		}
+   		var a = document.myForm.phone.value;
+   		if(a == "") {
+   			document.getElementById('mobileno').innerHTML="Fill the Phone no.";
+   			return false;
+   		}
+   		// var a = document.myForm.email.value;
+   		// if(a.indexOf('@')<=0) {
+   		// 	document.getElementById('email').innerHTML="Invalid @ position";
+   		// 	return false;
+   		// }
+   		var a = document.myForm.email.value;
+   		if(a == "") {
+   			document.getElementById('email').innerHTML="Fill the Email id";
+   			return false;
+   		}
+   		
+       alert("Your form is submitted successfully");
+			// body...
+			
+		}
+   </script>
+</head>
+<body>
+	<div class="container">
+		<form name="myForm" class="form-group" action="#" onsubmit="return validtion()" id="frmRegistration" method="POST" >
+			<div id="form">
+				<h1 id="h1">Book Rooms</h1>
+
+				<div id="first-group">
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" id="txtUsername" class="input" placeholder="First Name" onblur="validatename()">
+				<label id="lblErrorUserID"></label>
+			</div>
+			 
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" class="input" placeholder="Last Name">
+			</div>
+
+			<div id="content">
+				<i class="fas fa-phone-alt" ></i>
+				<input type="number" class="input" id="txtPhone" placeholder="Phone No." onblur="validatephone()">
+				<label id="lblErrorPhone"></label>
+			</div>
+			
+
+			<div id="content">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input type="email" class="input" id="email" placeholder="Email Id" onblur="validateemail()">
+				<label id="lblErrorEmail"></label>
+			</div>
+			
+
+			<div id="content"> 
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<input type="date" class="input" placeholder="Check in" onblur="validecheckin()" id="checkin"> 
+				<label style="color:white;">Check In</label>
+				<label id="errorCI"></label>
+			</div>
+
+			<div id="content"> 
+				<i class="fa fa-calendar" aria-hidden="true"></i>  
+				<input type="date" class="input" placeholder="Check out" onblur="validecheckout()" id="checkout"> 
+				 <label  style="color:white;">Check Out</label> 
+				 <label id="errorCO"></label>
+			</div>	
+
+			<div id="content">
+				<i class="fa fa-bed" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;" onblur="valideroom()" id="room">
+					<option value=""> Room Type</option>
+					<option>Normal Rooms</option>
+					<option>Luxury Rooms</option>
+					<option>Luxury Rooms with balcony veiw</option>
+					
+				</select>
+				<label id="errorroom"></label>
+			</div>
+
+			<div id="content">
+				<i class="fa fa-id-card" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;" onblur="validateID()" id="idproof">
+					<option value="">Identity Type </option>
+					<option>Aadhar Card</option>
+					<option>Pan Card</option>
+					<option>Birth Certificate</option>
+					<option>Passport</option>
+					
+				</select>
+				<label id="errorID"></label>
+			</div>
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> No. of Adult</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+
+
+						<i class="fa fa-user" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> No. of Children</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					
+				</select>
+				
+			</div> 	
+
+				</div>
+
+				<div class="margin1">
+					<input type="reset" name="" type="button" value="reset" id="submit-bt" class="button" > 
+					<a href="index.html #rooms">	<button type="button" value="Submit" id="submit-bt" class="button"   > Back</button></a>
+				<button type="Submit" value="Submit" id="submit-bt" class="button"  formaction="paymentform.html" onclick="validtion()"> Book Now</button>
+					</div>
+			</div>  
+		</form> 
+	</div>  
+<!------------------------------------------------ footer -------------------------------------->
+<footer>
+    <div class="footer-container" >
+        <div>
+        <h2>About Us</h2>
+        <p style="color:whitesmoke;">This is a small dispription about our restaurant name <code>The Green Evenue</code>. Hope you all like it and will come to our place to have some delicious cuisines.</p>
+    <ul class="social-icon">
+        <li class="flex">
+            <a href="https://twitter.com/i/flow/login" target="blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="flex"> <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook" ></i></a> </li>
+        <li class="flex">  <a href="https://www.pinterest.com/" target="blank"><i class="   fab fa-pinterest" ></i></a>
+            </li>
+            <li class="flex">  <a href="https://www.instagram.com/" target="blank"><i class="   fab fa-instagram"></i></a> </li>
+    </ul>
+          </div>
+    
+          <div >
+              <h2>Useful Links</h2>
+              <a href="#" class="list">Blog</a>
+              <a href="#" class="list">Rooms</a>
+              <a href="#"class="list">Subscription</a>
+              <a href="#" class="list">Gift Voucher</a>
+          </div>
+    
+          <div>
+            <h2>Privacy</h2>
+            <a href="#" class="list">Contact Us</a>
+            <a href="#" class="list">About us</a>
+            <a href="#" class="list">Carrer</a>
+            <a href="#" class="list">Services</a>
+          </div>
+    
+          <div>
+              <h2>Have a Question</h2>
+              <div class="contact-item">
+                 <span > <i class="fas fa-map-marker-alt" style="color:whitesmoke;"></i> </span>
+                 <span > 5585 Al Jadaf Area, Oud Metha Road, Dubai, United Arab Emirates </span>
+              </div>
+    
+              <div class="contact-item">
+                <span > <i class="fas fa-phone-alt" style="color:whitesmoke;"></i> </span>
+                <span> +91 7415468698 </span> 
+             </div>
+    
+             <div class="contact-item">
+                <span > <i class="fas fa-envelope" style="color:whitesmoke;"></i> </span>
+                <span> dmkhushleen@gmail.com</span> 
+             </div>
+          </div>
+    
+    </div>
+    </footer>
+
+	
+
+</body>
+</html>

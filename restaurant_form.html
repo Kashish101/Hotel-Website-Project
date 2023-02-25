@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Restaurant Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="restaurant_form_css.css">
+	<script src="https://kit.fontawesome.com/ce5e69de06.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+   : <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+  
+
+   <script type="text/javascript" >
+   	function validtion() {
+   		// body...
+   		var a = document.myForm.user.value;
+   		if(a == "") {
+   			document.getElementById('message').innerHTML="Fill the User name";
+   			return false;
+   		}
+   		var b = document.myForm.phone.value;
+   		if(b == "") {
+   			document.getElementById('mobileno').innerHTML="Fill the Phone no.";
+   			return false;
+   		}
+   		var c = document.myForm.email.value;
+   		if(c.indexOf('@')<=0) {
+   			document.getElementById('email').innerHTML="Invalid @ position";
+   			return false;
+   		}
+   		var d = document.myForm.email.value;
+   		if(d == "") {
+   			document.getElementById('email').innerHTML="Fill the Email id";
+   			return false;
+   		}
+   		else{
+   			document.getElementById('email').innerHTML="";
+
+   		}
+   			
+   		
+   		
+
+   	
+
+   
+
+			alert("Your form is submitted successfully");
+
+		 //window.location.href="paymentform.html";
+			// body...
+		}
+   </script>
+
+
+</head>
+<body>
+
+
+
+<title> The Green Evenue </title>
+<link rel="stylesheet" href="dining.css">
+
+</head>
+<body>
+	<div>
+		<header>
+			<div class="jumbotron">
+			<img src="pictures/hotel logo.jpg" width="100px" height="100px" style=" margin-left: 10%;">
+			<h1 style="color: #c44585;">The Green Evenue</h1>
+	   
+		 
+			   <span id = "nav-btn" onclick="openNav()">&#9776; Menu </span>
+		
+		   </div>
+	   </header>
+    <!-- side navbar -->
+<div id="hamburger" class="sidenav">
+    <a class="closebtn" onclick ="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="index.html #services">Services</a>
+    <a href="index.html #rooms">Rooms</a>
+    <a href="index.html #reveiw">Reviews</a>
+    <a href="Events.html">Events</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="dining.html">Dining</a>
+    <a href="contact.html">Contact Us</a>
+    <button class = "btn"><a href="book Rooms.html"><b>Book Rooms</b></a></button>
+  
+    <button class = "btn"><a href="restaurant_form.html"><b>Book Events</b></a></button>
+  </div>
+</div>
+  
+         <script>
+            function openNav(){
+              document.getElementById("hamburger").style.display="block";
+            }
+            function closeNav(){
+            document.getElementById("hamburger").style.display="none";
+            }
+         </script> 
+       <!-- end of side navbar --> 
+       
+
+<!--------------end navigation and header--------------->
+<div> 
+	<div class="container">
+		<form name="myForm" class="form-group" action="#" onsubmit="return validtion()">
+			<div id="form">
+				<h1 id="h1">Book Events</h1>
+
+				<div id="first-group">
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input name="user" type="text" class="input" value=""  placeholder="First Name" autocomplete="off">
+				<span id="message"style="font-weight: bold; color: white;"></span>
+				
+			</div>
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" class="input" placeholder="Last Name"
+				autocomplete="off">
+			</div>
+
+			<div id="content">
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<input name="phone" type="number" class="input" value="" placeholder="Phone No." autocomplete="off">
+				<span id="mobileno"style="font-weight: bold; color: white;"></span>
+				
+			</div>
+			
+
+			<div id="content">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<input name="email" type="email" class="input" value="" placeholder="Email Id" autocomplete="off">
+				<span id="email"style="font-weight: bold; color: white;"></span>
+			</div>
+			
+
+			<div id="content"> 
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<input name="date" type="date" class="input" value="" placeholder="Check in" ><label style="color: white;">Date of Event</label>
+				<!-- <span id="date"style="font-weight: bold; color: white;"></span> -->
+			</div>
+
+			<div id="content">
+				<i class="fa fa-th" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> Events</option>
+					<option>Crystal Ballroom</option>
+					<option>Plaza Terrace Garden</option>
+					<option>Conference Hall</option>
+					<option>Birthday/Kitty Hall</option>
+					<option>Food Truck</option>
+					
+				</select>
+			</div>
+
+			
+	
+
+			<div id="content">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<select class="input" style="background-color: black;">
+					<option value=""> No. of guests</option>
+					<option>1-100</option>
+					<option>100-200</option>
+					<option>200-300</option>
+					<option>300-400</option>
+					<option>400-500</option>
+					<option>500-600</option>
+					
+				</select>
+			</div>
+
+
+				</div>
+				
+                <div class="margin1">
+				<input type="reset" name="" type="button" value="reset" id="submit-bt" class="button" > 
+			<a href="Events.html">	<button type="button" value="Submit" id="submit-bt" class="button"   > Back</button></a>
+				<button type="Submit" value="Submit" id="submit-bt" class="button"  onclick="validateForm()"Create UserID autocomplete="off" formaction="paymentform.html"  > Book Now</button>
+				</div>
+
+
+			</div>
+		</form>
+	</div></div>
+	<!------------------------------------------------ footer -------------------------------------->
+<footer>
+    <div class="footer-container" >
+        <div>
+        <h2>About Us</h2>
+        <p style="color:whitesmoke;">This is a small dispription about our restaurant name <code>The Green Evenue</code>. Hope you all like it and will come to our place to have some delicious cuisines.</p>
+    <ul class="social-icon">
+        <li class="flex">
+            <a href="https://twitter.com/i/flow/login" target="blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="flex"> <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook" ></i></a> </li>
+        <li class="flex">  <a href="https://www.pinterest.com/" target="blank"><i class="   fab fa-pinterest" ></i></a>
+            </li>
+            <li class="flex">  <a href="https://www.instagram.com/" target="blank"><i class="   fab fa-instagram"></i></a> </li>
+    </ul>
+          </div>
+    
+          <div >
+              <h2>Useful Links</h2>
+              <a href="#" class="list">Blog</a>
+              <a href="#" class="list">Rooms</a>
+              <a href="#"class="list">Subscription</a>
+              <a href="#" class="list">Gift Voucher</a>
+          </div>
+    
+          <div>
+            <h2>Privacy</h2>
+            <a href="#" class="list">Contact Us</a>
+            <a href="#" class="list">About us</a>
+            <a href="#" class="list">Carrer</a>
+            <a href="#" class="list">Services</a>
+          </div>
+    
+          <div>
+              <h2>Have a Question</h2>
+              <div class="contact-item">
+                 <span > <i class="fas fa-map-marker-alt" style="color:whitesmoke;"></i> </span>
+                 <span > 5585 Al Jadaf Area, Oud Metha Road, Dubai, United Arab Emirates </span>
+              </div>
+    
+              <div class="contact-item">
+                <span > <i class="fas fa-phone-alt" style="color:whitesmoke;"></i> </span>
+                <span> +91 7415468698 </span> 
+             </div>
+    
+             <div class="contact-item">
+                <span > <i class="fas fa-envelope" style="color:whitesmoke;"></i> </span>
+                <span> dmkhushleen@gmail.com</span> 
+             </div>
+          </div>
+    
+    </div>
+    </footer>
+	
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="fstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Signup</title>
+</head>
+
+<body>
+  <div class="main1">
+    <p class="sign" align="center">SIGNUP</p> 
+    <h5 align="center">Already a member? <span class="forgot"><a href="login.html">LOGIN HERE</a></span></h5>
+    <form class="form1">
+      <input class="un " id="user" type="email" align="center" placeholder="Username">
+      <label id="erroruser"></label>
+      <input class="un " id="email" type="email" align="center" placeholder="Email Id"> 
+      <label id="erroremail"></label>
+      <input class="pass" id="pass" type="password" align="center" placeholder="Password">
+      <label id="errorpass"></label>
+      <input class="un " id="cpass" type="password" align="center" pattern="[0-9]{10}" placeholder="Confirm Password" onblur="validateRetypePassword()"> <br>
+      <label id="errorcpass"></label>
+      <br>
+      <a href="#" class="submit" onclick="validate()" align="center">SIGNUP</a>  
+<!--     <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>-->  
+       
+            
+      </form>       
+    </div>
+
+    <script>
+      function validate(){
+        if(document.getElementById("user").value == ""){
+          document.getElementById("erroruser").innerHTML="Please fill username";
+        }
+        else{
+          document.getElementById("erroruser").innerHTML="";
+        }
+        if(document.getElementById("email").value == ""){
+          document.getElementById("erroremail").innerHTML="Please fill your email";
+        }
+        else{
+          document.getElementById("erroremail").innerHTML="";
+        }
+        if(document.getElementById("pass").value == ""){
+          document.getElementById("errorpass").innerHTML="Please fill your password";
+        }
+        else{
+          document.getElementById("errorpass").innerHTML="";
+        }
+        if(document.getElementById("cpass").value == ""){
+          document.getElementById("errorcpass").innerHTML="please enter confirm password";
+        }
+        else if(document.getElementById("pass").value != document.getElementById("cpass").value){
+          document.getElementById("errorcpass").innerHTML="Password and Retype Password Do Not Match";
+        }
+        else{
+          document.getElementById("errorcpass").innerHTML="";
+        }
+      }
+      
+
+   
+    </script>
+     
+</body>
+
+</html>
